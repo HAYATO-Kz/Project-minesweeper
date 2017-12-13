@@ -6,7 +6,7 @@ Minesweeper strategy is the art of solving games. Techniques include learning pa
 ## How to play?
 1. Click **Play** button.
 
-![mainmenu](pic/pic1.png)
+![menu](pic/pic1.png)
 
 2. Play game by Left Click to select a square.
 
