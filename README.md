@@ -23,3 +23,7 @@ If there is not a mine in that square, a number will appear in that location, an
 You can click the flag to identify mines. If you completely clear the mines from all squares, you win.
 
 ![flag](pic/pic5.png)
+
+## Contributors
+- [**Hayato Kawai**](https://github.com/JP-SKE15) 6010545978
+- [**Saowaphak Huayjaroen**](https://github.com/mookSaowaphak) 6010546729
