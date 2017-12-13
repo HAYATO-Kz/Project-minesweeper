@@ -94,7 +94,7 @@ public class GUI extends JFrame {
 				for (int j = 0; j < 9; j++) {
 					g.setColor(Color.gray);
 					if (mines[i][j] == 1) {
-						g.setColor(Color.gray); //bombs
+						g.setColor(Color.gray); // bombs
 					}
 					if (revealed[i][j] == true) {
 						g.setColor(Color.black);
@@ -119,6 +119,7 @@ public class GUI extends JFrame {
 								g.drawString(Integer.toString(neighbours[i][j]), i * 80 + 28, j * 80 + 80 + 58);
 							}
 						} else if (mines[i][j] == 1) {
+
 							// bomb painting
 							g.fillRect(i * 80 + 37, j * 80 + 93, 5, 40);
 							g.fillRect(i * 80 + 30, j * 80 + 103, 20, 40);
@@ -126,15 +127,14 @@ public class GUI extends JFrame {
 							g.fillRect(i * 80 + 25, j * 80 + 108, 30, 30);
 						}
 					}
-					
-			// flags painting
-					if(flagged[i][j]==true ) {
+
+					// flags painting
+					if (flagged[i][j] == true) {
 						g.setColor(Color.white);
-						g.fillRect(i*80 + 25, j*80+80 + 10, 3, 50);
+						g.fillRect(i * 80 + 25, j * 80 + 80 + 10, 3, 50);
 						g.setColor(Color.red);
-						g.fillRect(i*80 + 28, j*80+80 + 10, 20, 23);
+						g.fillRect(i * 80 + 28, j * 80 + 80 + 10, 20, 23);
 					}
-	
 				}
 			}
 			// smile painting
@@ -177,7 +177,6 @@ public class GUI extends JFrame {
 			} else if (defeat == true) {
 				g.setColor(Color.red);
 			}
-
 			g.setFont(new Font(Fonts, Font.PLAIN, 50));
 			g.drawString(Integer.toString(time), 1150, 60);
 
@@ -195,7 +194,6 @@ public class GUI extends JFrame {
 					vicY = 70;
 				}
 				g.setFont(new Font(Fonts, Font.PLAIN, 55));
-
 				g.drawString(vicMes, vicX - 70, vicY - 5);
 			}
 
@@ -212,12 +210,7 @@ public class GUI extends JFrame {
 			g.fillRect(flagX + 25, flagY + 10, 3, 50);
 			g.setColor(Color.red);
 			g.fillRect(flagX + 28, flagY + 10, 20, 23);
-			// g.setColor(Color.black);
-			// g.fillOval(flagX+31, flagY+17, 10, 10);
-			// g.fillRect(flagX+31,flagY+17, 5, 40);
-			// g.fillRect(flagX+34,flagY+17, 6, 11);
-			// g.fillRect(flagX+31,flagY+19, 12,7 );
-			// g.fillRect(flagX+33,flagY+18, 9, 9);
+
 		}
 	}
 
@@ -251,14 +244,14 @@ public class GUI extends JFrame {
 						flagged[inBoxX()][inBoxY()] = false;
 					}
 				} else {
-					if(flagged[inBoxX()][inBoxY()]==false) {
-					revealed[inBoxX()][inBoxY()] = true;
+					if (flagged[inBoxX()][inBoxY()] == false) {
+						revealed[inBoxX()][inBoxY()] = true;
 					}
 				}
 			} else {
 				System.out.println("The point is not inside the board");
 			}
-			
+
 			if (inFace() == true) {
 				resetAll();
 			}
