@@ -26,7 +26,8 @@ You can click the flag to identify mines. If you completely clear the mines from
 
 ## What does we learn and use in this project?
 - Java Swing for Graphic User Interface (GUI), for example, using JFrame Form, create buttons.
-- Using Object for mouse's moving and mouse click.
+- Using Object for mouse's moving, mouse click and create buttons .
+- Using Inheritance for extend JFrame and JPanel.
 
 ## Contributors
 - [**Hayato Kawai**](https://github.com/JP-SKE15) 6010545978
