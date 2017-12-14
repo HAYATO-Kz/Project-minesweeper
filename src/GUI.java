@@ -1,3 +1,7 @@
+/**
+ * This class is class of code for mine-sweeper game.
+ * @author Hayato Kawai
+ */
 import javax.swing.*;
 import java.util.*;
 import java.awt.*;
@@ -84,6 +88,7 @@ public class GUI extends JFrame {
 
 		Click click = new Click();
 		this.addMouseListener(click);
+
 	}
 
 	public class Board extends JPanel {
@@ -237,6 +242,7 @@ public class GUI extends JFrame {
 			mX = e.getX();
 			mY = e.getY();
 			if (inBoxX() != -1 && inBoxY() != -1) {
+				System.out.println("kill me pls");
 				if (flagger == true && revealed[inBoxX()][inBoxY()] == false) {
 					if (flagged[inBoxX()][inBoxY()] == false) {
 						flagged[inBoxX()][inBoxY()] = true;
@@ -399,7 +405,6 @@ public class GUI extends JFrame {
 				neighbours[i][j] = neight;
 			}
 		}
-		resetter = false;
 	}
 
 	public boolean inFace() {
@@ -419,5 +424,4 @@ public class GUI extends JFrame {
 		}
 		return false;
 	}
-
 }
