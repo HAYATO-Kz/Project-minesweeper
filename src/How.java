@@ -34,7 +34,6 @@ public class How extends javax.swing.JFrame {
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
 		jPanel1.setLayout(null);
-
 		jButton1.setBackground(new java.awt.Color(102, 0, 0));
 		jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
 		jButton1.setText("Back");

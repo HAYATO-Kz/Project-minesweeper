@@ -46,7 +46,6 @@ public class JFrame1 extends javax.swing.JFrame {
 		});
 		jPanel1.add(jButton2);
 		jButton2.setBounds(530, 470, 120, 40);
-
 		jButton1.setBackground(new java.awt.Color(204, 0, 0));
 		jButton1.setFont(new java.awt.Font("Myanmar MN", 1, 18)); // NOI18N
 		jButton1.setForeground(new java.awt.Color(255, 204, 204));

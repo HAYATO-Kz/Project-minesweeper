@@ -8,7 +8,6 @@ public class Main implements Runnable {
 
 	public static void main() {
 		new Thread(new Main()).start();
-
 	}
 
 	public void run() {
