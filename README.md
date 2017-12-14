@@ -8,6 +8,10 @@ Minesweeper strategy is the art of solving games. Techniques include learning pa
 
 ![menu](pic/pic1.png)
 
+Ps. If you click at **How to Play** button, This frame will pop-up and if you click **Back** button it will back to main menu.
+
+![htp](pic/pic6.png)
+
 2. Play game by Left Click to select a square.
 
 ![game](pic/pic2.png)
@@ -29,6 +33,15 @@ You can click the flag to identify mines. If you completely clear the mines from
 - Using **Object** for mouse's moving, mouse click, create JButton and create JLebel.
 - Using **Inheritance** for extend JFrame and JPanel.
 - Using **Loop** for find the mouse'sposition, count how many mines around the square that you click.
+
+## How to install
+You need: 
+- Java ver. 8 or newer
+- minesweeper.jar
+
+To run the file: 
+1. Click 'minesweeper.jar' file above and then download.
+2. Runs 'minesweeper.jar' file
 
 ## Contributors
 - [**Hayato Kawai**](https://github.com/JP-SKE15) 6010545978
