@@ -403,7 +403,9 @@ public class GUI extends JFrame {
 				}
 				neighbours[i][j] = neight;
 			}
-		}
+		
+			}
+		resetter = false;
 	}
 
 	public boolean inFace() {
