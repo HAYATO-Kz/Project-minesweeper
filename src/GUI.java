@@ -12,6 +12,7 @@ import java.awt.event.MouseMotionListener;
 
 public class GUI extends JFrame {
 	final int spacing = 1;
+	public boolean end0 = true;
 	public boolean resetter = false;
 	public boolean flagger = false;
 	public String Fonts = "Tahoma";
@@ -51,7 +52,7 @@ public class GUI extends JFrame {
 
 	/* set the board game */
 	public GUI() {
-		this.setTitle("KABOOM!!!");
+		this.setTitle("Minesweeper");
 		this.setSize(1286, 829);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
@@ -245,7 +246,7 @@ public class GUI extends JFrame {
 
 			mX = e.getX();
 			mY = e.getY();
-			if (inBoxX() != -1 && inBoxY() != -1) {
+			if (inBoxX() != -1 && inBoxY() != -1 && end0 == true) {
 				if (flagger == true && revealed[inBoxX()][inBoxY()] == false) {
 					if (flagged[inBoxX()][inBoxY()] == false) {
 						flagged[inBoxX()][inBoxY()] = true;
@@ -340,6 +341,7 @@ public class GUI extends JFrame {
 				for (int j = 0; j < 9; j++) {
 					if (revealed[i][j] == true && mines[i][j] == 1) {
 						defeat = true;
+						end0 = false;
 						life = false;
 						end = new Date();
 					}
@@ -382,6 +384,7 @@ public class GUI extends JFrame {
 	public void resetAll() {
 		resetter = true;
 		vicMes = "Nothing!";
+		end0= true;
 		flagger = false;
 		start = new Date();
 		vicY = -50;
