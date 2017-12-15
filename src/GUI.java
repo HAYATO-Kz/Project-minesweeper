@@ -1,3 +1,4 @@
+
 /**
  * This class is class of code for mine-sweeper game.
  * @author Hayato Kawai
@@ -48,6 +49,7 @@ public class GUI extends JFrame {
 	public Date end = new Date();
 	public int time;
 
+	/* set the board game */
 	public GUI() {
 		this.setTitle("KABOOM!!!");
 		this.setSize(1286, 829);
@@ -90,6 +92,7 @@ public class GUI extends JFrame {
 
 	}
 
+	/* paint the game's board */
 	public class Board extends JPanel {
 		public void paintComponent(Graphics g) {
 			g.setColor(Color.BLACK);
@@ -218,6 +221,7 @@ public class GUI extends JFrame {
 		}
 	}
 
+	/* Class for mouse's moving */
 	public class Move implements MouseMotionListener {
 
 		@Override
@@ -233,6 +237,7 @@ public class GUI extends JFrame {
 		}
 	}
 
+	/* Class for mouse's click */
 	public class Click implements MouseListener {
 
 		@Override
@@ -241,7 +246,6 @@ public class GUI extends JFrame {
 			mX = e.getX();
 			mY = e.getY();
 			if (inBoxX() != -1 && inBoxY() != -1) {
-				System.out.println("kill me pls");
 				if (flagger == true && revealed[inBoxX()][inBoxY()] == false) {
 					if (flagged[inBoxX()][inBoxY()] == false) {
 						flagged[inBoxX()][inBoxY()] = true;
@@ -272,30 +276,31 @@ public class GUI extends JFrame {
 		}
 
 		@Override
-		public void mouseEntered(MouseEvent e) {
+		public void mouseEntered(MouseEvent arg0) {
 			// TODO Auto-generated method stub
 
 		}
 
 		@Override
-		public void mouseExited(MouseEvent e) {
+		public void mouseExited(MouseEvent arg0) {
 			// TODO Auto-generated method stub
 
 		}
 
 		@Override
-		public void mousePressed(MouseEvent e) {
+		public void mousePressed(MouseEvent arg0) {
 			// TODO Auto-generated method stub
 
 		}
 
 		@Override
-		public void mouseReleased(MouseEvent e) {
+		public void mouseReleased(MouseEvent arg0) {
 			// TODO Auto-generated method stub
 
 		}
 	}
 
+	/* box's position in x axis */
 	public int inBoxX() {
 		for (int i = 0; i < 16; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -308,6 +313,7 @@ public class GUI extends JFrame {
 		return -1;
 	}
 
+	/* box's position in y axis */
 	public int inBoxY() {
 		for (int i = 0; i < 16; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -327,6 +333,7 @@ public class GUI extends JFrame {
 		return false;
 	}
 
+	/* check the victory if amount of box less than or equal to mine you will win */
 	public void checkVictory() {
 		if (defeat == false) {
 			for (int i = 0; i < 16; i++) {
@@ -345,6 +352,7 @@ public class GUI extends JFrame {
 		}
 	}
 
+	/* count how many mine */
 	public int totalMines() {
 		int total = 0;
 		for (int i = 0; i < 16; i++) {
@@ -357,6 +365,7 @@ public class GUI extends JFrame {
 		return total;
 	}
 
+	/* count box opened */
 	public int totalBoxsRevealed() {
 		int totals = 0;
 		for (int i = 0; i < 16; i++) {
@@ -369,8 +378,8 @@ public class GUI extends JFrame {
 		return totals;
 	}
 
+	/* reset the game */
 	public void resetAll() {
-
 		resetter = true;
 		vicMes = "Nothing!";
 		flagger = false;
@@ -403,11 +412,11 @@ public class GUI extends JFrame {
 				}
 				neighbours[i][j] = neight;
 			}
-		
-			}
+		}
 		resetter = false;
 	}
 
+	/** @return the opposite boolean of face's button */
 	public boolean inFace() {
 		int dif = (int) Math.sqrt((Math.abs(mX - centerfaceX) * Math.abs(mX - centerfaceX))
 				+ (Math.abs(mY - centerfaceY) * Math.abs(mY - centerfaceY)));
@@ -417,6 +426,7 @@ public class GUI extends JFrame {
 		return false;
 	}
 
+	/** @return the opposite boolean of flag's button */
 	public boolean inFlagger() {
 		int difs = (int) Math.sqrt(
 				(Math.abs(mX - cflagX) * Math.abs(mX - cflagX)) + (Math.abs(mY - cflagY) * Math.abs(mY - cflagY)));

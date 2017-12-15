@@ -1,5 +1,6 @@
 /**
  * This class is main class for run mine-sweeper game.
+ * 
  * @author Hayato Kawai
  */
 public class Main implements Runnable {
@@ -10,6 +11,7 @@ public class Main implements Runnable {
 		new Thread(new Main()).start();
 	}
 
+	/* run the game */
 	public void run() {
 		gui.setVisible(true);
 		while (true) {
